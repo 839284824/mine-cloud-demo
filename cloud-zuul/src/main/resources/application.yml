@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: cloud-gateway
+server:
+  port: 9005
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka/
+zuul:
+  routes:
+    ribbon1:
+      path: /ribbon1/**
+    ribbon2:
+      path: /ribbon2/**
+    cloud-feign1:
+      path: /feign1/**
+    cloud-feign2:
+      path: /feign2/**

@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+      uri: http://127.0.0.1:9006/
+      profile: testing
+      label: master
+      name: application

@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: cloud-feign2
+  #zipkin 服务器地址
+  zipkin:
+    base-url: http://127.0.0.1:9411
+  sleuth:
+      sampler:
+        percentage: 1
+server:
+  port: 9003
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka/

@@ -1,0 +1,22 @@
+server:
+  port: 9006
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: http://gitlab.renrenche.com/business-ps/assets.git
+          username: gongzhao
+          password: gongzhao42617
+          search-paths: /src/main/resources
+      label: master
+#      URL和对应的配置文件的对应关系：
+#      /{application}/{profile}[/{label}]
+#      /{application}-{profile}.yml
+#      /{label}/{application}-{profile}.yml
+#      /{application}-{profile}.properties
+#      /{label}/{application}-{profile}.properties
+#      上面的url会映射{application}-{profile}.properties对应的配置文件，{label}对应git上不同的分支，默认为master。
+#      所以我们启动之后，可以通过http://127.0.0.1:9006/application-production.yml访问文件
