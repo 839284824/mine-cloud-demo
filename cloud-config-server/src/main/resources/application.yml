@@ -7,10 +7,6 @@ spring:
     config:
       server:
         git:
-          uri: http://gitlab.renrenche.com/business-ps/assets.git
-          username: gongzhao
-          password: gongzhao42617
-          search-paths: /src/main/resources
       label: master
 #      URL和对应的配置文件的对应关系：
 #      /{application}/{profile}[/{label}]
